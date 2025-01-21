@@ -9,11 +9,11 @@ public class LetterC : MonoBehaviour, ILetter
 
     public void Click()
     {
-        Sequence seq = DOTween.Sequence();
+        Sequence seq = DOTween.Sequence();//Сосдаем последовательность анимации
 
-        seq.Append(mat.DOFade(0f, 1f));
-        seq.AppendInterval(2f);
-        seq.Append(mat.DOFade(1f, 1f));
+        seq.Append(mat.DOFade(0f, 1f));//Уменьшаем прозрачность
+        seq.AppendInterval(2f);//Ждем интервал
+        seq.Append(mat.DOFade(1f, 1f));//Увеличиваем прозрачность
 
         seq.Play();
     }

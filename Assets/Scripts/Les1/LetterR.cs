@@ -10,13 +10,13 @@ public class LetterR : MonoBehaviour, ILetter
 
     public void Click()
     {
-        Sequence seq = DOTween.Sequence();
+        Sequence seq = DOTween.Sequence();//Сосдаем последовательность
 
-        seq.Append(mat.DOColor(Random.ColorHSV(), 1f));
-        seq.AppendInterval(2f);
-        seq.Append(mat.DOColor(currentColor, 1f));
+        seq.Append(mat.DOColor(Random.ColorHSV(), 1f));//Добавляем первой смену цвета на рандомный
+        seq.AppendInterval(2f);//Добавили интревал задержки времени 2 секунды
+        seq.Append(mat.DOColor(currentColor, 1f));//Меняем цвет на обычный
 
-        seq.Play();
+        seq.Play();//начинаем проигрывать анимацию
     }
 
     void Start()

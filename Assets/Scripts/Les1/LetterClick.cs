@@ -8,11 +8,11 @@ public class LetterClick : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);//Создаем луч из камеры по позиции мыщки
 
-            if (Physics.Raycast(ray, out RaycastHit hit))
-                if (hit.collider.GetComponent<ILetter>() != null)
-                    hit.collider.GetComponent<ILetter>().Click();
+            if (Physics.Raycast(ray, out RaycastHit hit))//Запускаем луч и проверяем попал ли он
+                if (hit.collider.GetComponent<ILetter>() != null)//Проверяем есть ли интерфейс ILetter
+                    hit.collider.GetComponent<ILetter>().Click();//Вызываем метод Click ILetter
         }
     }
 }
