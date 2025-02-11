@@ -10,12 +10,12 @@ public class EctionOnRobots : MonoBehaviour
 
         if(Physics .Raycast (ray,out RaycastHit hit))
         {
-            if (hit.collider.GetComponent<IRobot>() != null)
+            if (hit.collider.GetComponent<IRobots>() != null)
             {
                 if (Input.GetKeyDown(KeyCode.Alpha1))
-                    hit.collider.GetComponent<IRobot>().Greeting();
+                    hit.collider.GetComponent<IRobots>().Greeting();
                 if (Input.GetKeyDown(KeyCode.Alpha2))
-                    hit.collider.GetComponent<IRobot>().Use();
+                    hit.collider.GetComponent<IRobots>().Use();
             }
 
             if (hit.collider.GetComponent<IWaiter>() != null)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RobotWaiter : MonoBehaviour, IRobot, IWaiter 
+public class RobotWaiter : MonoBehaviour, IRobots, IWaiter 
 {
     [SerializeField]
     protected GameObject _coffe;

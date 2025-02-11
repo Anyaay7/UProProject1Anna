@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RobotMechanic : MonoBehaviour, IRobot
+public class RobotMechanic : MonoBehaviour, IRobots
 {
     public void Bring()
     {
